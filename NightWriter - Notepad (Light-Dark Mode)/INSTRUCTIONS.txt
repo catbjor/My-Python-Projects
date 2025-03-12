@@ -1,0 +1,35 @@
+This notepad comes with a section to save and view saved files. 
+
+Instructions for Setting Up File Path:
+
+Before running this application, please make sure that you set your file path where the 'saved_files.txt' file should be located. 
+The program will look for the 'saved_files.txt' file to load and save the list of files you've worked with.
+
+If you want to customize the file location, you need to adjust the code accordingly.
+    1. Open the code in a Python editor.
+    2. Look for the following section in the code:
+
+
+
+    def save_file_list(self):
+        with open("saved_files.txt", "w") as f:
+            ...
+
+    def load_file_list(self):
+        if os.path.exists("saved_files.txt"):
+            with open("saved_files.txt", "r") as f:
+                ...
+
+
+
+- Replace `"saved_files.txt"` with the full file path you want to use. For example:
+  
+    def save_file_list(self):
+        with open("C:/Users/YourUsername/Documents/saved_files.txt", "w") as f:
+            ...
+
+- You can change the path to any location you prefer. 
+
+Make sure the path exists before running the program.
+
+Enjoy using NightWriter!:)
